@@ -1,5 +1,10 @@
+import { decimalToRoman } from "./decimal-to-roman";
+
 describe("decimalToRoman()", () => {
-  it("works", () => {
-    expect(true).toBe(true);
+  it("1 should become 'I'", () => {
+    const expected = "I";
+    const actual = decimalToRoman(1);
+
+    expect(actual).toBe(expected);
   });
 });
