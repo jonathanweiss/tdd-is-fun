@@ -1,6 +1,7 @@
 export const decimalToRoman = (decimal: number): string => {
-  if (decimal === 2) {
-    return "II";
+  let output = "";
+  for (let i = 0; i < decimal; i++) {
+    output += "I";
   }
-  return "I";
+  return output;
 };
