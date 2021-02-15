@@ -19,6 +19,14 @@ describe("decimalToRoman()", () => {
       input: 3,
       expected: "III",
     },
+    {
+      input: 4,
+      expected: "IV",
+    },
+    {
+      input: 5,
+      expected: "V",
+    },
   ];
 
   testCases.forEach(({ input, expected }) => {
