@@ -1,28 +1,44 @@
+interface RomanNumerals {
+  value: number;
+  symbol: string;
+}
+
+const romanNumerals: Array<RomanNumerals> = [
+  {
+    value: 40,
+    symbol: "XL",
+  },
+  {
+    value: 10,
+    symbol: "X",
+  },
+  {
+    value: 9,
+    symbol: "IX",
+  },
+  {
+    value: 5,
+    symbol: "V",
+  },
+  {
+    value: 4,
+    symbol: "IV",
+  },
+  {
+    value: 1,
+    symbol: "I",
+  },
+];
+
 export const decimalToRoman = (decimal: number): string => {
   let output = "";
 
-  while (decimal > 0) {
-    switch (true) {
-      case decimal > 9:
-        output += "X";
-        decimal -= 10;
-        break;
-      case decimal > 8:
-        output += "IX";
-        decimal -= 9;
-        break;
-      case decimal > 4:
-        output += "V";
-        decimal -= 5;
-        break;
-      case decimal > 3:
-        output += "IV";
-        decimal -= 4;
-        break;
-      default:
-        output += "I";
-        decimal--;
+  for (let rn of romanNumerals) {
+    while (decimal >= rn.value) {
+      output += rn.symbol;
+      decimal -= rn.value;
     }
   }
+
   return output;
 };

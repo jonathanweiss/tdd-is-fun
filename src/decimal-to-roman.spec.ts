@@ -63,6 +63,10 @@ describe("decimalToRoman()", () => {
       input: 39,
       expected: "XXXIX",
     },
+    {
+      input: 40,
+      expected: "XL",
+    },
   ];
 
   testCases.forEach(({ input, expected }) => {
