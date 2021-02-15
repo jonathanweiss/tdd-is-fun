@@ -1,29 +1,17 @@
 import { decimalToRoman } from "./decimal-to-roman";
 
-interface TestCase {
-  input: number;
-  expected: string;
-}
-
 describe("decimalToRoman()", () => {
-  const testCases: TestCase[] = [
-    {
-      input: 1,
-      expected: "I",
-    },
-    {
-      input: 2,
-      expected: "II",
-    },
-    {
-      input: 3,
-      expected: "III",
-    },
-  ];
+  it("converts a 1 into 'I'", () => {
+    const expected = "I";
+    const actual = decimalToRoman(1);
 
-  testCases.forEach(({ input, expected }) => {
-    it(`converts a ${input} into "${expected}"`, () => {
-      expect(decimalToRoman(input)).toBe(expected);
-    });
+    expect(actual).toBe(expected);
+  });
+
+  it("converts a 2 into 'II'", () => {
+    const expected = "II";
+    const actual = decimalToRoman(2);
+
+    expect(actual).toBe(expected);
   });
 });
