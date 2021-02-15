@@ -67,6 +67,42 @@ describe("decimalToRoman()", () => {
       input: 40,
       expected: "XL",
     },
+    {
+      input: 50,
+      expected: "L",
+    },
+    {
+      input: 90,
+      expected: "XC",
+    },
+    {
+      input: 100,
+      expected: "C",
+    },
+    {
+      input: 400,
+      expected: "CD",
+    },
+    {
+      input: 500,
+      expected: "D",
+    },
+    {
+      input: 900,
+      expected: "CM",
+    },
+    {
+      input: 1000,
+      expected: "M",
+    },
+    {
+      input: 1984,
+      expected: "MCMLXXXIV",
+    },
+    {
+      input: 1006,
+      expected: "MVI",
+    },
   ];
 
   testCases.forEach(({ input, expected }) => {
