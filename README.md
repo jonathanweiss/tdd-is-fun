@@ -22,6 +22,8 @@ D = 500
 
 M = 1000
 
+Symbols **must be ordered** from left to right (highest to lowest)! For example: XVI = 10 + 5 + I => 16
+
 A symbol can be repeated to display a different number:
 
 II = 2
